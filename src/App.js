@@ -7,7 +7,7 @@ import { useMovies } from "./useMovies";
 const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
-const KEY = "f84fc31d";
+const KEY = "5682fe80";
 
 export default function App() {
   const [query, setQuery] = useState("");
@@ -274,7 +274,8 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
       async function getMovieDetails() {
         setIsLoading(true);
         const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`
+          ` http://www.omdbapi.com/?i=tt3896198&apikey=5682fe80`
+         
         );
         const data = await res.json();
         setMovie(data);
