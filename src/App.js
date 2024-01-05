@@ -274,7 +274,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
       async function getMovieDetails() {
         setIsLoading(true);
         const res = await fetch(
-          ` http://www.omdbapi.com/?i=tt3896198&apikey=5682fe80`
+          `http://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`
          
         );
         const data = await res.json();
